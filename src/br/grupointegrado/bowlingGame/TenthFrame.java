@@ -17,8 +17,23 @@ public class TenthFrame extends Frame {
     }
 
     @Override
+    public int frameScore() {
+        return super.frameScore() + getRollC();
+    }
+
+    @Override
+    public int totalScore() {
+        return frameScore();
+    }
+
+    @Override
+    public int bonusScore() {
+        return 0;
+    }
+
+    @Override
     public String toString() {
-        return "Frame{"
+        return "TenthFrame{"
                 + "rollA=" + getRollA()
                 + ", rollB=" + getRollB()
                 + ", rollC=" + getRollC()
